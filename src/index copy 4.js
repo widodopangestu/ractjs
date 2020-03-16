@@ -10,7 +10,6 @@ import "./index.css";
 import App from "./App";
 import About from "./About";
 import Contact from "./Contact";
-import Transition from "./Transition";
 import NotFound from "./NotFound";
 
 const routing = (
@@ -33,17 +32,11 @@ const routing = (
             Contact
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/transition" exact activeStyle={{ color: "blue" }}>
-            Transition
-          </NavLink>
-        </li>
       </ul>
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/transition" component={Transition} />
         <Route component={NotFound} />
       </Switch>
     </div>

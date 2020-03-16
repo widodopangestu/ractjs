@@ -1,17 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  Route,
-  NavLink,
-  Switch,
-  BrowserRouter as Router
-} from "react-router-dom";
+import { Route, NavLink, BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import About from "./About";
 import Contact from "./Contact";
-import Transition from "./Transition";
-import NotFound from "./NotFound";
 
 const routing = (
   <Router>
@@ -33,19 +26,10 @@ const routing = (
             Contact
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/transition" exact activeStyle={{ color: "blue" }}>
-            Transition
-          </NavLink>
-        </li>
       </ul>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/transition" component={Transition} />
-        <Route component={NotFound} />
-      </Switch>
+      <Route exact path="/" component={App} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
     </div>
   </Router>
 );
